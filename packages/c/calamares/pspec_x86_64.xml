@@ -273,6 +273,7 @@
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/calamares-python.mo</Path>
             <Path fileType="man">/usr/share/man/man8/calamares.8</Path>
             <Path fileType="data">/usr/share/polkit-1/actions/com.github.calamares.calamares.policy</Path>
+            <Path fileType="data">/usr/share/polkit-1/rules.d/10-livecd.rules</Path>
         </Files>
     </Package>
     <Package>

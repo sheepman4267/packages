@@ -1,11 +1,18 @@
 <PISI>
     <Source>
         <Name>calamares</Name>
+        <Homepage>https://calamares.io</Homepage>
         <Packager>
             <Name>Evan Maddock</Name>
             <Email>maddock.evan@vivaldi.net</Email>
         </Packager>
-        <License>GPL-2.0-or-later</License>
+        <License>BSD-2-Clause</License>
+        <License>CC-BY-4.0</License>
+        <License>CC0-1.0</License>
+        <License>GPL-3.0-or-later</License>
+        <License>LGPL-2.1-only</License>
+        <License>LGPL-3.0-or-later</License>
+        <License>MIT</License>
         <PartOf>system</PartOf>
         <Summary xml:lang="en">Distribution-independent installer framework</Summary>
         <Description xml:lang="en">Calamares is a distribution-independent system installer, with an advanced partitioning feature for both manual and automated partitioning operations. Calamares is designed to be customizable by distribution maintainers without the need for cumbersome patching, thanks to third-party branding and external modules support.
@@ -145,6 +152,8 @@
             <Path fileType="library">/usr/lib64/calamares/modules/users/module.desc</Path>
             <Path fileType="library">/usr/lib64/calamares/modules/usersq/libcalamares_viewmodule_usersq.so</Path>
             <Path fileType="library">/usr/lib64/calamares/modules/usersq/module.desc</Path>
+            <Path fileType="library">/usr/lib64/calamares/modules/webview/libcalamares_viewmodule_webview.so</Path>
+            <Path fileType="library">/usr/lib64/calamares/modules/webview/module.desc</Path>
             <Path fileType="library">/usr/lib64/calamares/modules/welcome/libcalamares_viewmodule_welcome.so</Path>
             <Path fileType="library">/usr/lib64/calamares/modules/welcome/module.desc</Path>
             <Path fileType="library">/usr/lib64/calamares/modules/welcomeq/libcalamares_viewmodule_welcomeq.so</Path>
@@ -395,7 +404,7 @@
     </Package>
     <History>
         <Update release="1">
-            <Date>2023-09-12</Date>
+            <Date>2023-09-18</Date>
             <Version>3.2.62</Version>
             <Comment>Packaging update</Comment>
             <Name>Evan Maddock</Name>

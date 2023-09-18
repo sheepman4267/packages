@@ -3,7 +3,15 @@ version    : 3.2.62
 release    : 1
 source     :
     - https://github.com/calamares/calamares/releases/download/v3.2.62/calamares-3.2.62.tar.gz: a0fbcec2a438693753fc174220356119ad7adb8a2b19c317518aa1cb025d6dd0
-license    : GPL-2.0-or-later # CHECK ME
+homepage   : https://calamares.io
+license    :
+    - BSD-2-Clause
+    - CC-BY-4.0
+    - CC0-1.0
+    - GPL-3.0-or-later
+    - LGPL-2.1-only
+    - LGPL-3.0-or-later
+    - MIT
 component  : system
 summary    : Distribution-independent installer framework
 description: |

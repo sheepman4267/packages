@@ -3,8 +3,8 @@
         <Name>blender</Name>
         <Homepage>https://blender.org/</Homepage>
         <Packager>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Packager>
         <License>GPL-2.0-or-later</License>
         <PartOf>multimedia.graphics</PartOf>
@@ -3722,12 +3722,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="72">
+        <Update release="73">
             <Date>2023-10-16</Date>
             <Version>3.6.4</Version>
             <Comment>Packaging update</Comment>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Update>
     </History>
 </PISI>

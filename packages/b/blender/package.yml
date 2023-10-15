@@ -1,6 +1,6 @@
 name       : blender
 version    : 3.6.4
-release    : 72
+release    : 73
 source     :
     - https://download.blender.org/source/blender-3.6.4.tar.xz : cc52f4191580b4d0b70be480b295999866bc512f761226108157e23ac089471e
 license    : GPL-2.0-or-later

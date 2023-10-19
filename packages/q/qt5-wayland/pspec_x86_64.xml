@@ -3,8 +3,8 @@
         <Name>qt5-wayland</Name>
         <Homepage>https://www.qt.io</Homepage>
         <Packager>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Packager>
         <License>LGPL-2.1-or-later</License>
         <License>LGPL-3.0-or-later</License>
@@ -18,7 +18,7 @@ platform plugin, and provides a way to run Qt applications as Wayland clients.
 The server side is the QtCompositor API, and allows users to write their
 own Wayland compositors.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>qt5-wayland</Name>
@@ -90,7 +90,7 @@ own Wayland compositors.
 </Description>
         <PartOf>programming.library</PartOf>
         <RuntimeDependencies>
-            <Dependency release="47">qt5-wayland</Dependency>
+            <Dependency release="48">qt5-wayland</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib64/qt5/examples/wayland/custom-extension/compositor/compositor.pro</Path>
@@ -230,7 +230,7 @@ own Wayland compositors.
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="47">qt5-wayland</Dependency>
+            <Dependency release="48">qt5-wayland</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/qtwaylandscanner</Path>
@@ -552,12 +552,12 @@ own Wayland compositors.
         </Files>
     </Package>
     <History>
-        <Update release="47">
-            <Date>2023-10-03</Date>
+        <Update release="48">
+            <Date>2023-10-19</Date>
             <Version>5.15.10</Version>
             <Comment>Packaging update</Comment>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Update>
     </History>
 </PISI>

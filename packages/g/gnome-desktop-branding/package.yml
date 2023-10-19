@@ -1,6 +1,6 @@
 name       : gnome-desktop-branding
 version    : '17'
-release    : 41
+release    : 42
 source     :
     - git|https://github.com/getsolus/gnome-desktop-branding.git : 79a76bd1b8ad4ce58cae698f2d856760f694e396
 license    : GPL-2.0-only
@@ -30,7 +30,7 @@ rundeps    :
     - gnome-shell-extensions
     - gnome-shell-extension-topicons-plus
     - papirus-icon-theme
-    - qtstyleplugins
+    - qadwaitadecorations
     - solus-artwork
     - livecd :
         - gnome-desktop-branding

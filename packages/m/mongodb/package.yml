@@ -15,7 +15,7 @@ builddeps  :
     - pkgconfig(liblzma)
     - pkgconfig(libmongoc-1.0)
     - pkgconfig(libpcap)
-    - pkgconfig(libpcre)
+    - pkgconfig(libpcre2-8)
     - pkgconfig(libsasl2)
     - pkgconfig(libtcmalloc)
     - pkgconfig(libzstd)
@@ -41,16 +41,15 @@ build      : |
     ./buildscripts/scons.py install-devcore \
         DESTDIR=$installdir \
         PREFIX=/usr \
-        CCACHE=ccache \
         CC=$CC \
         CXX=$CXX \
-        --cxx-std=17 \
+        --cxx-std=20 \
         --disable-warnings-as-errors \
         --release \
         --use-sasl-client \
         --use-system-boost \
         --use-system-mongo-c \
-        --use-system-pcre \
+        --use-system-pcre2 \
         --use-system-snappy \
         --use-system-stemmer \
         --use-system-tcmalloc \

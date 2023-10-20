@@ -1,8 +1,8 @@
 name       : mongodb
-version    : 6.0.11
+version    : 7.0.2
 release    : 29
 source     :
-    - https://fastdl.mongodb.org/src/mongodb-src-r6.0.11.tar.gz : 8486db0834344aa9e6ea886d1296dd196935f272c896be93d13f542fa580140f
+    - https://fastdl.mongodb.org/src/mongodb-src-r7.0.2.tar.gz : 64fab0b107464e08fdead98bd6be7d94a269d32af6a557a55cb5a62a86e09f4b
 license    : SSPL-1.0
 component  : database
 summary    : A high-performance, open source, schema-free document-oriented database

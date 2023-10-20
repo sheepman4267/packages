@@ -1,43 +1,29 @@
 diff --git a/SConstruct b/SConstruct
 index 89c044ab..a6d02072 100644
 --- a/SConstruct
-+++ b/SConstruct
-@@ -2513,7 +2513,6 @@ if env.TargetOSIs('posix'):
-     # -Winvalid-pch Warn if a precompiled header (see Precompiled Headers) is found in the search path but can't be used.
++++ b/SConstruct0
+@@ -3026,7 +3026,6 @@
+     env.Append(
+         CCFLAGS=[
+             "-fasynchronous-unwind-tables",
+-            "-g2" if not env.TargetOSIs('emscripten') else "-g",
+             "-Wall",
+             "-Wsign-compare",
+             "-Wno-unknown-pragmas",
+@@ -3099,6 +3098,8 @@
+     # warnings as errors. See http://stackoverflow.com/a/19382663.
+     if not (env.TargetOSIs('darwin') and env.ToolchainIs('clang')):
+         env.Append(LINKFLAGS=["-pthread"])
++        env.Append( CXXFLAGS=os.environ['CXXFLAGS'] )
++        env.Append( LINKFLAGS=os.environ['LDFLAGS'] )
  
-     env.Append( CCFLAGS=["-fasynchronous-unwind-tables",
--                         "-ggdb" if not env.TargetOSIs('emscripten') else "-g",
-                          "-Wall",
-                          "-Wsign-compare",
-                          "-Wno-unknown-pragmas",
-@@ -2569,6 +2568,8 @@ if env.TargetOSIs('posix'):
- 
-     # env.Append( " -Wconversion" ) TODO: this doesn't really work yet
-     env.Append( CXXFLAGS=["-Woverloaded-virtual"] )
-+    env.Append( CXXFLAGS=os.environ['CXXFLAGS'] )
-+    env.Append( LINKFLAGS=os.environ['LDFLAGS'] )
- 
-     # On OS X, clang doesn't want the pthread flag at link time, or it
-     # issues warnings which make it impossible for us to declare link
-@@ -3085,6 +3086,8 @@ if myenv.ToolchainIs('clang', 'gcc'):
-  
-         # Warn about moves of prvalues, which can inhibit copy elision.
-         AddToCXXFLAGSIfSupported(myenv, "-Wpessimizing-move")
- 
-+        AddToCXXFLAGSIfSupported(myenv, "-Wno-redundant-move")
-+
-         # Disable warning about variables that may not be initialized
-         # Failures are triggered in the case of boost::optional in GCC 4.8.x
+     # SERVER-9761: Ensure early detection of missing symbols in dependent
+     # libraries at program startup. For non-release dynamic builds we disable
+@@ -3657,6 +3658,7 @@
          # TODO: re-evaluate when we move to GCC 5.3
-@@ -3703,11 +3706,6 @@ def doConfigure(myenv):
+         # see: http://stackoverflow.com/questions/21755206/how-to-get-around-gcc-void-b-4-may-be-used-uninitialized-in-this-funct
+         myenv.AddToCXXFLAGSIfSupported("-Wno-maybe-uninitialized")
++        myenv.AddToCXXFLAGSIfSupported("-Wno-redundant-move")
  
- 
-     if myenv.ToolchainIs('gcc', 'clang'):
--        # Usually, --gdb-index is too expensive in big static binaries, but for dynamic
--        # builds it works well.
--        if link_model.startswith("dynamic"):
--            AddToLINKFLAGSIfSupported(myenv, '-Wl,--gdb-index')
--
-         # Our build is already parallel.
-         AddToLINKFLAGSIfSupported(myenv, '-Wl,--no-threads')
- 
+         # Disable warning about templates that can't be implicitly instantiated. It is an attempt to
+         # make a link error into an easier-to-debug compiler failure, but it triggers false

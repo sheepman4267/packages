@@ -3,6 +3,6 @@
 0003-boost-log-dynlink.patch
 0004-missing-optional-header.patch
 mongodb-5.0.2-skip-reqs-check.patch
-mongodb-6.0.0-boost-1.79.patch
+mongodb-7.0.2-disable-metrics.patch
 gcc-12.patch
 gcc-13.patch

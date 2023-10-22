@@ -54,13 +54,10 @@
             <Path fileType="data">/usr/share/icons/hicolor/16x16/apps/org.gnome.BrowserConnector.png</Path>
             <Path fileType="data">/usr/share/icons/hicolor/48x48/apps/org.gnome.BrowserConnector.png</Path>
         </Files>
-        <Replaces>
-            <Package>chrome-gnome-shell</Package>
-        </Replaces>
     </Package>
     <History>
-        <Update release="1">
-            <Date>2023-10-17</Date>
+        <Update release="2">
+            <Date>2023-10-22</Date>
             <Version>42.1</Version>
             <Comment>Packaging update</Comment>
             <Name>Zach Bacon</Name>

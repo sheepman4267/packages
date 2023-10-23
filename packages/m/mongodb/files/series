@@ -5,4 +5,3 @@
 mongodb-5.0.2-skip-reqs-check.patch
 mongodb-7.0.2-disable-metrics.patch
 gcc-12.patch
-gcc-13.patch
